@@ -38,14 +38,91 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><label for="dob">DOB</label></td>
+                    <td>:</td>
+                    <td><input type="date" id="dob" name="dateOfBirth"/></td>
+                </tr>
+                <tr>
+                    <td>Qualification</td>
+                    <td>:</td>
+                    <td>
+                        <input list="qual" name="qualification">
+                        <datalist id="qual">
+                            <option value="10th Pass"></option>
+                            <option value="12th Pass"></option>
+                            <option value="UG"></option>
+                            <option value="PG"></option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="contact">Mobile</label></td>
+                    <td>:</td>
+                    <td><input type="number" id="contact" name="mobile"/></td>
+                </tr>
+                <tr>
+                    <td><label for="em">Email</label></td>
+                    <td>:</td>
+                    <td><input 
+                        type="email" 
+                        placeholder="Enter email." 
+                        id="em"
+                        name="email"/></td>
+                </tr>
+                <tr>
+                    <td><label for="mana">Manager</label></td>
+                    <td>:</td>
+                    <td>
+                        <input 
+                            type="text" 
+                            id="mana" 
+                            name="manager" 
+                            value="BOSS" 
+                            readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>:</td>
+                    <td>
+                        <input type="checkbox" id="draw" name="hobby" value="drawing"/>
+                        <label for="draw">Drawing</label>
+                        <input type="checkbox" id="garden" name="hobby" value="gardening"/>
+                        <label for="garden">Gardening</label>
+                        <input type="checkbox" id="paint" name="hobby" value="painting"/>
+                        <label for="paint">Painting</label>
+                        <input type="checkbox" id="oth" name="hobby" value="others"/>
+                        <label for="oth">Others</label>
+                    </td>
+                </tr>
+                <tr>
                     <td><label for="address">Address</label></td>
                     <td>:</td>
                     <td><textarea 
                             name="add" 
                             id="address" 
-                            placeholder="Enter address"\
+                            placeholder="Enter address"
                             rows="3"
                             cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="country">Country</label></td>
+                    <td>:</td>
+                    <td>
+                        <select id="country" name="ctry">
+                            <option>--select--</option>
+                            <option value="india">India</option>
+                            <option value="china">China</option>
+                            <option value="nepal">Nepal</option>
+                            <option value="SL">Sri Lanka</option>
+                            <option value="japan">Japan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="letter">Letter</label></td>
+                    <td>:</td>
+                    <td><input type="file" id="letter" name="rLetter"/></td>
                 </tr>
                 <tr>
                     <td><button type="submit">Register</button></td>
