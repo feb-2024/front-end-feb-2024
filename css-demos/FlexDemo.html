@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Flex Demo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        .flex-container{
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            background-color: beige;
+            /* when the flex is arranged horizontally(row)
+                    - the main axis is horizontal
+                    - the cross axis is vertical*/
+            /* when the flex is arranged vertically(column)
+                    - the main axis is vertical
+                    - the cross axis is horizontal*/
+
+            /* justify-content works on the main axis*/
+            justify-content: end;
+            /* align-items works on the cross axis*/
+            align-items: end;
+        }
+        .flex-item{
+            background-color: brown;
+            color: beige;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">text1</div>
+        <div class="flex-item">text2</div>
+        <div class="flex-item">text3</div>
+    </div>
+    
+</body>
+</html>
