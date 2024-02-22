@@ -1,0 +1,29 @@
+.grid-container{
+    background-color: grey;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 100px 200px 100px;
+    /* grid-template-columns: 30% 50% 20%; */
+    /*grid-template-columns: 1fr 2fr 1fr;*//* used in industry*/
+    /* column-gap: 5px;
+    row-gap: 2px; */
+    /* gap: 2px 5px; */
+    /* grid-template-rows: 100px 200px 100px; */
+    justify-content: center;
+    height: 600px;
+    align-content: center;
+}
+.grid-item{
+    
+    background-color: green;
+    color: gold;
+    border: black 2px solid;
+    padding: 10px;
+    /* margin: 5px; */
+}
+.item-two{
+    width: 100px;
+    height: 100px;
+    justify-self: center;
+    align-self: center;
+}

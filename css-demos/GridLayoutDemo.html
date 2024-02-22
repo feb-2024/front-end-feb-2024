@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        body{
+            background-color: beige;
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+            'head head head'
+            'navigation content side'
+            'navigation foot foot';
+            grid-template-columns: 1fr 8fr 2fr;
+            grid-template-rows: 1fr 10fr 3fr;
+        }
+
+        header,
+        nav,
+        main,
+        aside,
+        footer{
+            background-color: steelblue;
+            color: white;
+            border: skyblue 1px solid;
+        }
+
+        header{
+            grid-area: head;
+        }
+
+        nav{
+            grid-area: navigation;
+        }
+        main{
+            grid-area: content;
+        }
+        aside{
+            grid-area: side;
+        }
+        footer{
+            grid-area: foot;
+        }
+    </style>
+</head>
+<!-- here body is the grid container and 
+and the semnatic tags in the body are the grid items -->
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <main>main content</main>
+    <aside>side content</aside>
+    <footer>footer</footer>
+</body>
+</html>
