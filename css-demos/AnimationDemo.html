@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Animation Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @keyframes move-div {
+    
+
+ 0% {
+transform: skewY(20deg) translateX(0) rotate(0deg);
+}
+ 50% {
+transform: skewX(0deg) translateX(200px) rotate(0deg);
+}
+100% {
+ transform: skewX(0deg) translateX(0) rotate(-360deg);
+}
+        /* 0% {
+            transform: rotateZ(0deg);
+           } 
+           25% {
+            transform: rotateZ(20deg);
+           }
+           50% {
+            transform: translate(200px, 0);
+           }
+           75%{
+            transform: rotate(360deg);
+           }
+           100%{
+            transform: rotate(0deg);
+           } */
+      }
+      div {
+        height: 25px;
+        width: 35px;
+        margin: 100px;
+        background-color: black;
+        color: aliceblue;
+        border-radius: 5px;
+        animation-name: move-div;
+        animation-duration: 8s;
+      }
+    </style>
+  </head>
+  <body>
+    <div>CSS</div>
+  </body>
+</html>

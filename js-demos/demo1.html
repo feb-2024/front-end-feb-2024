@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <!--output in js-->
+    <h2>A demo to show 3 ways of displaying output using java script</h2>
+    <ol>
+        <li>console.log()</li>
+        <li>alert()</li>
+        <li>document.getElementById().innerHTML</li>
+    </ol>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <script>
+        // JS code goes here
+        console.log("this output is displayed on the browser's console"); // not used in projects, we just for debugging
+        alert("this output is alerted using alert()");//  maybe can use in projects
+        document.getElementById("para1").innerHTML = "<b>this output is displayed using document.getElementById('para1').innerHTML</b>"
+        document.getElementById("para2").innerText = "<b>this output is displayed using document.getElementById('para2').innerText</b>"
+        // extensively used in projects
+    </script>
+</body>
+</html>

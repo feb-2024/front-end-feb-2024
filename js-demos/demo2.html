@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h2>Demo to work with variables</h2>
+    <script>
+        var mark = 40;
+        var firstName = "Will";
+        var lastName = "Smith";
+        console.log("Mark of the student: ", mark);
+        console.log("First Name of the student: ", firstName);
+        console.log("Last Name of the student: ", lastName);
+
+        mark = "english"; // reused the variable and stored a different datatype
+        alert("mark has chaged its datatype : " + mark);
+
+        subject = "math"; // used a variable without declaring
+        console.log("Subject is :", subject);
+
+        console.log("some data: " + msg); // throws a ReferenceError on the browsers console
+    </script>
+</body>
+</html>
