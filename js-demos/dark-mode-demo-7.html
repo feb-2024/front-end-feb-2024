@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        function toggleDarkMode(){
+            let checkValue = document.getElementById("dark").checked;
+            //alert("Value:" + checkValue);
+            if(checkValue){
+                //alert("enable dark mode");
+                // set the background-color of body tag to black
+                document.body.style.backgroundColor = "black";
+                // set the text-color of body to white
+                document.body.style.color = "white";
+            } else {
+                //alert("disable dark mode");
+                // set the background-color of body tag to white
+                document.body.style.backgroundColor = "white";
+                // set the text-color of body to black
+                document.body.style.color = "black";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="dark" onchange="toggleDarkMode()"> Dark Mode
+    <h2>Demo for dark-mode</h2>
+    <div>
+        JavaScript is the world's most popular programming language.
+    </div>
+    <div>
+        JavaScript is the programming language of the Web.
+    </div>
+    <div>
+        JavaScript is easy to learn.
+    </div> 
+</body>
+</html>
