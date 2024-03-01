@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        function changeForegroundColor(){
+            let foreColorValue = document.getElementById("fcolor").value;
+            //alert(foreColorValue);
+            document.body.style.color = foreColorValue;
+        }
+
+        function changeBackgroundColor(){
+            let backColorValue = document.getElementById("bcolor").value;
+            //alert(backColorValue);
+            document.body.style.backgroundColor = backColorValue;
+        }
+    </script>
+</head>
+<body>
+    <h2>Demo to change background and foreground color</h2>
+    <div>
+        <label for="fcolor">Foreground color : </label>
+        <select id="fcolor" onchange="changeForegroundColor()">
+            <option>Select Foreground Color</option>
+            <option style="background-color: brown;" value="brown"></option>
+            <option style="background-color: darkblue;" value="darkblue"></option>
+            <option style="background-color: black;" value="black"></option>
+            <option style="background-color: hotpink;" value="hotpink"></option>
+            <option style="background-color: orange;" value="orange"></option>
+            <option style="background-color: darkgreen;" value="darkgreen"></option>
+            <option style="background-color: white;" value="white"></option>
+        </select>
+        <label for="bcolor">Background color : </label>
+        <select id="bcolor" onchange="changeBackgroundColor()">
+            <option>Select Background Color</option>
+            <option style="background-color: brown;" value="brown"></option>
+            <option style="background-color: darkblue;" value="darkblue"></option>
+            <option style="background-color: black;" value="black"></option>
+            <option style="background-color: hotpink;" value="hotpink"></option>
+            <option style="background-color: orange;" value="orange"></option>
+            <option style="background-color: darkgreen;" value="darkgreen"></option>
+            <option style="background-color: white;" value="white"></option>
+        </select>
+    </div>
+</body>
+</html>

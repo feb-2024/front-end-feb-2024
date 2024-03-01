@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        function compare(){
+            let num1 = document.getElementById("n1").value;
+            let num2 = document.getElementById("n2").value;
+            let output;
+            if(num1 > num2){
+                //output = "Number " + num1 + " is greater than the number" + num2;
+                // in ES6 version of JS , we have template strings
+                // we can use template strings to avoid + , ""
+                // template string are enclosed within back tick symbols ``
+                output = `Number ${num1} is greater than the number ${num2}`;
+
+            } else if(num2 > num1){
+                //output = "Number " + num2 + " is greater than the number" + num1;
+                output = `Number ${num2} is greater than the number ${num1}`;
+            } else{
+                //output = "Number " + num2 + " is equal to the number " + num1;
+                output = `Number ${num2} is equal to the number ${num1}`;
+            }
+            document.getElementById("head4").innerHTML = output;
+        }
+
+        function erase(){
+            document.getElementById("n1").value = "";
+            document.getElementById("n2").value = "";
+            document.getElementById("head4").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <h2>Demo to find the greater of two numbers</h2>
+    <div>
+        <label for="n1">First number:</label>
+        <input type="text" id="n1">
+        <label for="n2">Second number:</label>
+        <input type="text" id="n2">
+    </div>
+    <div>
+        <button type="button" onclick="compare()">COMPARE</button>
+        <button type="button" onclick="erase()">CLEAR</button>
+    </div>
+    <div>
+        <h4 id="head4"></h4>
+    </div>
+</body>
+</html>
