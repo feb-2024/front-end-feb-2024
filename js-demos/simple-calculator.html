@@ -36,17 +36,22 @@
         let isOpSelected = false;
         let isExpCompleted = false;
         let storedOp;
+        
+        function clearMemory(){
+            num1 = 0;
+            num2 = 0;
+            result = 0;
+            isFirstNumSelected = false;
+            isExpCompleted = false;
+            isOpSelected = false;
+            storedOp = '';
+        }
+
         function display(val){
             switch(val){
                 case 'C':
                     document.getElementById("myVal").value = "";
-                    num1 = 0;
-                    num2 = 0;
-                    result = 0;
-                    isFirstNumSelected = false;
-                    isExpCompleted = false;
-                    isOpSelected = false;
-                    storedOp = '';
+                    clearMemory();
                     break;
                 case '0':
                 case '1':
@@ -95,13 +100,7 @@
                                 break;
                         }
                         document.getElementById("myVal").value = result;
-                        num1 = 0;
-                        num2 = 0;
-                        result = 0;
-                        isFirstNumSelected = false;
-                        isExpCompleted = false;
-                        isOpSelected = false;
-                        storedOp = '';
+                        clearMemory();
                     }
                     break;
             }
