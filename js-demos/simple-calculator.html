@@ -32,6 +32,7 @@
         let num1 = 0;
         let num2 = 0;
         let result = 0;
+        let isFirstNumSelected = false;
         let isOpSelected = false;
         let isExpCompleted = false;
         let storedOp;
@@ -42,6 +43,7 @@
                     num1 = 0;
                     num2 = 0;
                     result = 0;
+                    isFirstNumSelected = false;
                     isExpCompleted = false;
                     isOpSelected = false;
                     storedOp = '';
@@ -63,15 +65,18 @@
                     }else{
                         num1 = val;
                         document.getElementById("myVal").value = num1;
+                        isFirstNumSelected = true;
                     }
                     break;
                 case '+':
                 case '-':
                 case '/':
                 case '*':
-                    isOpSelected = true;
-                    storedOp = val;
-                    document.getElementById("myVal").value += storedOp;
+                    if(isFirstNumSelected){
+                        isOpSelected = true;
+                        storedOp = val;
+                        document.getElementById("myVal").value += storedOp;
+                    }
                     break;
                 case '=':
                     if(isExpCompleted){
@@ -93,6 +98,7 @@
                         num1 = 0;
                         num2 = 0;
                         result = 0;
+                        isFirstNumSelected = false;
                         isExpCompleted = false;
                         isOpSelected = false;
                         storedOp = '';
