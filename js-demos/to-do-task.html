@@ -47,7 +47,9 @@
             // here first take out the value of the text box and storing in variable newTodo
             let newTodo = document.getElementById("myVal").value;
             // push(add) that variable into the array todo
-            todo.push(newTodo);
+            if(newTodo != ''){
+                todo.push(newTodo);
+            }
             // clear the text box
             document.getElementById("myVal").value = "";
             // call displayTodo()

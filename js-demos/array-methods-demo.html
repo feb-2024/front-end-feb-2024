@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <script>
+        let myNumbers = [20, 10, 60, 1, 4, 9, 30, 40];
+        
+        function sortAsc(a, b){
+            return a - b;
+        }
+
+        function sortDesc(a, b){
+            return b - a;
+        }
+
+        function sortTheArrayAsc(){
+            myNumbers.sort(sortAsc);
+            document.getElementById("para2").innerHTML = "";
+            document.getElementById("para3").innerHTML = "";
+            document.getElementById("para4").innerHTML = "";
+            document.getElementById("para1").innerHTML = myNumbers;
+        }
+
+        function sortTheArrayDesc(){
+            document.getElementById("para1").innerHTML = "";
+            document.getElementById("para3").innerHTML = "";
+            document.getElementById("para4").innerHTML = "";
+            myNumbers.sort(sortDesc);
+            document.getElementById("para2").innerHTML = myNumbers;
+        }
+
+        function rotateForward(){
+            //[20, 10, 60, 1, 4, 9, 30, 40]
+            // take out the last item from the array
+            let lastItem = myNumbers[myNumbers.length-1];
+            for(let i=myNumbers.length-1;i>=0;i--){
+                if(i==0){
+                    myNumbers[0] = lastItem;
+                    break;
+                }
+                myNumbers[i] = myNumbers[i-1];
+            }
+            document.getElementById("para1").innerHTML = "";
+            document.getElementById("para2").innerHTML = "";
+            document.getElementById("para4").innerHTML = "";
+            document.getElementById("para3").innerHTML = myNumbers;
+        }
+
+        function rotateBackwards(){
+            //[20, 10, 60, 1, 4, 9, 30, 40]
+            // take out the last item from the array
+            let firstItem = myNumbers[0];
+            for(let i=0;i<myNumbers.length;i++){
+                if(i==myNumbers.length-1){
+                    myNumbers[myNumbers.length-1] = firstItem;
+                    break;
+                }
+                myNumbers[i] = myNumbers[i+1];
+            }
+            document.getElementById("para1").innerHTML = "";
+            document.getElementById("para2").innerHTML = "";
+            document.getElementById("para3").innerHTML = "";
+            document.getElementById("para4").innerHTML = myNumbers;
+        }
+    </script>
+</head>
+<body>
+    <h2>Demo to work with different array methods</h2>
+    <div>
+        <p id="para"></p>
+    </div>
+    <div>
+        <button type="button" onclick="sortTheArrayAsc()">Sort in Ascending Order</button>
+        <p id="para1"></p>
+    </div>
+    <div>
+        <button type="button" onclick="sortTheArrayDesc()">Sort in Descending Order</button>
+        <p id="para2"></p>
+    </div>
+    <div>
+        <button type="button" onclick="rotateForward()">Rotate forward</button>
+        <p id="para3"></p>
+    </div>
+    <div>
+        <button type="button" onclick="rotateBackwards()">Rotate backwards</button>
+        <p id="para4"></p>
+    </div>
+    <script>
+        document.getElementById("para").innerHTML = myNumbers;
+    </script>
+</body>
+</html>
