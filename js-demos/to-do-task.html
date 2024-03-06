@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+        }
+        li:hover{
+            border: 1px solid black;
+            background-color: grey;
+        }
+    </style>
+    <script>
+        let todo = ["Call Accountant", "Pick Up Grocery"];
+        function displayTodo(){
+            let data = "<ul>";
+            for(let eachTodo of todo){
+                //console.log(eachTodo);
+                //data += `<li onclick=removeTodo('${eachTodo}')>${eachTodo}</li>`;
+                data += "<li onclick=removeTodo(\""+encodeURIComponent(eachTodo)+"\")>"+eachTodo+"</li>";
+            }
+            data += "</ul>";
+            document.getElementById("para1").innerHTML = data;
+        }
+
+        function removeTodo(item){
+            //alert(decodeURIComponent(item));
+            // traverse through the array todo
+            for(let i=0;i<todo.length;i++){
+                // check if item is there in the todo array
+                if(decodeURIComponent(item) == todo[i]){
+                    // if it is there splice it
+                    todo.splice(i, 1);
+                    // break out of the loop
+                    break;
+                }
+            }
+            // call displayTodo()
+            displayTodo();
+        }
+
+        function addTodo(){
+            // here first take out the value of the text box and storing in variable newTodo
+            let newTodo = document.getElementById("myVal").value;
+            // push(add) that variable into the array todo
+            todo.push(newTodo);
+            // clear the text box
+            document.getElementById("myVal").value = "";
+            // call displayTodo()
+            displayTodo();
+        }
+        //displayTodo(); // calling the function when the page loads
+    </script>
+</head>
+<body>
+    <div>
+        <h3>My Todo</h3>
+        <div>
+            <input type="text" id="myVal"> <button type="button" onclick="addTodo()">ADD</button>
+        </div>
+        <p id="para1">
+
+        </p>
+    </div>
+    <script>
+        displayTodo();
+    </script>
+</body>
+</html>
