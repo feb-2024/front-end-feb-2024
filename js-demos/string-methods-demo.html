@@ -3,12 +3,47 @@
 <head>
     
     <title>Page Title</title>
+    <style>
+        div{
+            margin: 5px;
+        }
+    </style>
     <script>
         let theString = "";
         function setTheString(){
             theString = document.getElementById("myVal").value;
             document.getElementById("head4").innerHTML = theString;
             document.getElementById("myVal").value = "";
+        }
+
+        function findLength(){
+            let lent = theString.length;
+            //document.getElementById("para1").innerHTML = "The length of " + theString + " is " + lent;
+            document.getElementById("para1").innerHTML = `The length of "${theString}" is ${lent}`;
+        }
+
+        function upper(){
+            document.getElementById("para2").innerHTML = theString.toUpperCase();
+        }
+
+        function lower(){
+            document.getElementById("para3").innerHTML = theString.toLowerCase();
+        }
+
+        function displaySelect(){
+            let toDisplay = "<select id=\'ind\' onchange=\'displayChar()\''>";
+            for(let i=0;i<theString.length;i++){
+                toDisplay += `<option value='${i}'>${i}</option>`;
+            }
+            toDisplay += `</select>`;
+            document.getElementById("para4").innerHTML = toDisplay;
+
+        }
+
+        function displayChar(){
+            //alert(document.getElementById('ind').value);
+            let index = document.getElementById('ind').value;
+            document.getElementById("para5").innerHTML = `The character at index ${index} is: ${theString.charAt(index)}`;
         }
     </script>
 </head>
@@ -21,6 +56,23 @@
     </div>
     <div>
         <h4 id="head4"></h4>
+    </div>
+    <div>
+        <button type="button" onclick="findLength()">Find Length</button>
+        <span id="para1"></span>
+    </div>
+    <div>
+        <button type="button" onclick="upper()">To Uppercase</button>
+        <span id="para2"></span>
+    </div>
+    <div>
+        <button type="button" onclick="lower()">To Lowercase</button>
+        <span id="para3"></span>
+    </div>
+    <div>
+        <button type="button" onclick="displaySelect()">Char At</button>
+        <span id="para4"></span>
+        <span id="para5"></span>
     </div>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        let numbers = [20, 40, 10, 24, 87, 15, 42, 94];
+        //let numbers = ["Chennai","Mumbai","Delhi","Kolkatta","Pune"];
+        function display(){
+            document.getElementById("para1").innerHTML = numbers;
+            let data1 = '';
+            let data3 = '';
+            for(let x in numbers ){
+                data1 += x + ",";
+                data3 += numbers[x] + ",";
+            }
+            document.getElementById("para2").innerHTML = data1 + "<br>" + data3;
+            let data2 = '';
+            for(let y of numbers ){
+                data2 += y + ",";
+            }
+            document.getElementById("para3").innerHTML = data2;
+        }
+    </script>
+</head>
+<body>
+    <h2>Demo to see the difference between for-in and for-of</h2>
+    <button type="button" onclick="display()">Display</button>
+    <div>
+        <h4>The array</h4>
+        <p id="para1"></p>
+    </div>
+    <div>
+        <h4>Using for-in</h4>
+        <p id="para2"></p>
+    </div>
+    <div>
+        <h4>Using for-of</h4>
+        <p id="para3"></p>
+    </div>
+</body>
+</html>
