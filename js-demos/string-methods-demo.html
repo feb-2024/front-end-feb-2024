@@ -33,7 +33,7 @@
         function displaySelect(){
             let toDisplay = "<select id=\'ind\' onchange=\'displayChar()\''>";
             for(let i=0;i<theString.length;i++){
-                toDisplay += `<option value='${i}'>${i}</option>`;
+                toDisplay += `<option value='${i}'>index ${i}</option>`;
             }
             toDisplay += `</select>`;
             document.getElementById("para4").innerHTML = toDisplay;
@@ -44,6 +44,22 @@
             //alert(document.getElementById('ind').value);
             let index = document.getElementById('ind').value;
             document.getElementById("para5").innerHTML = `The character at index ${index} is: ${theString.charAt(index)}`;
+        }
+
+        function sliceString(){
+            // we will get the start index and the end index as inputs
+            // we will use prompt() in JS
+            let startIndex = prompt("Enter start index:");
+            let endIndex = prompt("Enter end index:");
+            document.getElementById("para6").innerHTML = theString.slice(startIndex, endIndex);
+        }
+
+        function splitTheString(){
+            // for this to work set the string as something:something:something
+            // and then in the text box give the delimiter as :
+            // and then click the split the string button
+            let delimit = document.getElementById("deVal").value;
+            document.getElementById("para7").innerHTML = theString.split(delimit);
         }
     </script>
 </head>
@@ -73,6 +89,16 @@
         <button type="button" onclick="displaySelect()">Char At</button>
         <span id="para4"></span>
         <span id="para5"></span>
+    </div>
+    <div>
+        <button type="button" onclick="sliceString()">Slice the String</button>
+        <span id="para6"></span>
+    </div>
+    <div>
+        <label for="deVal">Enter the delimiter :</label>
+        <input type="text" id="deVal">
+        <button type="button" onclick="splitTheString()">Split the String</button>
+        <span id="para7"></span>
     </div>
 </body>
 </html>
