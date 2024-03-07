@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page Title</title>
+    <script>
+        let theString = "";
+        function setTheString(){
+            theString = document.getElementById("myVal").value;
+            document.getElementById("head4").innerHTML = theString;
+            document.getElementById("myVal").value = "";
+        }
+    </script>
+</head>
+<body>
+    <h2>Demo to work with string methods</h2>
+    <div>
+        <label for="myVal">Enter the string:</label>
+        <input type="text" id="myVal">
+        <button type="button" onclick="setTheString()">Set the string</button>
+    </div>
+    <div>
+        <h4 id="head4"></h4>
+    </div>
+</body>
+</html>
