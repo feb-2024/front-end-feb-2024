@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <style>
+        thead{
+            background-color: black;
+            color: white;
+        }
+        tbody{
+            background-color: blanchedalmond;
+        }
+        tr:hover{
+            background-color:cadetblue;
+            color: white;
+        }
+    </style>
+    <script>
+      function displayAllStudents() {
+        let city = "Chennai";
+        let allCities = ["Chennai", "Delhi", "Mumbai"];
+        // here we will have an array of studentDetails object
+        let allStudentDetails = [
+          {
+            studentId: 101,
+            studentFirstName: "Will",
+            studentLastName: "Smith",
+            studentScore: 95,
+          },
+          {
+            studentId: 102,
+            studentFirstName: "Tom",
+            studentLastName: "Hanks",
+            studentScore: 90,
+          },
+          {
+            studentId: 103,
+            studentFirstName: "Daniel",
+            studentLastName: "Radcliff",
+            studentScore: 99,
+          },
+          {
+            studentId: 104,
+            studentFirstName: "Rupert",
+            studentLastName: "Grint",
+            studentScore: 98,
+          }
+        ];
+
+        // we are going to display this array of objects in a table format
+        let data = `<table>
+                        <thead>
+                            <tr>
+                                <th>STUDENT ID</th>
+                                <th>STUDENT FIRST NAME</th>
+                                <th>STUDENT LAST NAME</th>
+                                <th>STUDENT SCORE</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+        for(let eachStudent of allStudentDetails){
+            data += `<tr>
+                        <td>${eachStudent.studentId}</td>
+                        <td>${eachStudent.studentFirstName}</td>
+                        <td>${eachStudent.studentLastName}</td>
+                        <td>${eachStudent.studentScore}</td>
+                    </tr>`;
+        }
+        data += `</tbody></table>`;
+        document.getElementById("div1").innerHTML = data;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Demo to show how to work with array of object literals</h2>
+    <div>
+      <button type="button" onclick="displayAllStudents()">
+        Display all Student details
+      </button>
+    </div>
+    <div id="div1"></div>
+  </body>
+</html>

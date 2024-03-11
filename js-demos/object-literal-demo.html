@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        function display(){
+
+            // here we are going to create an object literal 
+            // and store it in a variable
+            let studentDetails = {
+                studentId: 101,
+                studentFirstName: "Will",
+                studentLastName: "Smith",
+                studentScore: 95
+            };
+            document.getElementById("para1").innerHTML = "<div>";
+            document.getElementById("para1").innerHTML += `The student's id is ${studentDetails.studentId}</div>`;
+            document.getElementById("para1").innerHTML += `<div>The student's first name is ${studentDetails.studentFirstName}</div>`;
+            document.getElementById("para1").innerHTML += `<div>The student's last name is ${studentDetails.studentLastName}</div>`;
+            document.getElementById("para1").innerHTML += `<div>The student's score is ${studentDetails.studentScore}</div>`;
+        }   
+
+    </script>
+</head>
+<body>
+    <h2>Demo to show how to work with object literal</h2>
+    <div>
+        <button type="button" onclick="display()">Click Me</button>
+        <p id="para1"></p>
+    </div>
+</body>
+</html>
