@@ -6,12 +6,17 @@
         img {
             width: 200px;
             height: 150px;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-sizing: border-box;
         }
         .flex-item {
             width: 200px;
             height: 300px;
-            background-color: bisque;
+            background-color: whitesmoke;
             margin: 10px;
+            border: 2px solid darkolivegreen;
+            border-radius: 10px;
         }
         #flex-container{
             display: flex;
@@ -136,7 +141,7 @@
                 }
             ];
 
-            // traverse throught the allGadgets array
+            // traverse through the allGadgets array and display them
             let data = '';
             for(let eachGadget of allGadgets){
                 data += `<div class='flex-item'>
