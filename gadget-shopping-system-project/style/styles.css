@@ -6,7 +6,7 @@ body{
     'head head'
     'con side'
     'foot foot';
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 2fr;
     grid-template-rows: 1fr 8fr 3fr;
 }
 

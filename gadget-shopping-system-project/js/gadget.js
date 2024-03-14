@@ -122,7 +122,7 @@ function displayGadgets(){
     for(let eachGadget of allGadgets){
         data += `<div class='flex-item'>
                     <img src='${eachGadget.gadgetImageUrl}'>
-                    <div><a href='cart-gadgets.html' target='iframe-cart' id='add-cart' onclick='addToCart(${eachGadget.gadgetId})'>Add to Cart</a></div>
+                    <div><button type='button' id='add-cart' onclick='addToCart(${eachGadget.gadgetId})'>Add to Cart</button></div>
                     <h4>Gadget Name: ${eachGadget.gadgetName}</h4>
                     <p>Gadget Category: ${eachGadget.gadgetCategory}</p>
                     <p>Gadget Cost: ${eachGadget.gadgetCost}</p>
@@ -145,7 +145,7 @@ function addToCart(gadgetId){
     }
     //console.log(allCartGadgets);
     // then display the allCartGadgets array in a table
-    //displayCart();
+    displayCart();
 }
 
 function displayCart(){
@@ -168,6 +168,7 @@ function displayCart(){
                 </tr>`;
     }
     data += `</tbody></table>`;
+    
     document.getElementById("div1").innerHTML = data;
 }
    
