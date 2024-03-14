@@ -1,112 +1,112 @@
 let allCartGadgets = [];
 let allGadgets = [
     {
-        gadgetId: 1001,
+        id: 1001,
         gadgetName: "Dell Inspiron 14 5000",
         gadgetCategory: "Laptop",
         gadgetCost: 60000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1002,
+        id: 1002,
         gadgetName: "iPad Air2",
         gadgetCategory: "Tablet",
         gadgetCost: 80000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1590252973599-bb37fb327a55?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }, 
     {
-        gadgetId: 1003,
+        id: 1003,
         gadgetName: "Galaxy S23",
         gadgetCategory: "Mobile",
         gadgetCost: 70000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1706832608032-61cced969d6a?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1004,
+        id: 1004,
         gadgetName: "iPhone 14",
         gadgetCategory: "Mobile",
         gadgetCost: 65000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1697898706719-bce6e007c817?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1005,
+        id: 1005,
         gadgetName: "Dell Inspiron 14 5000",
         gadgetCategory: "Laptop",
         gadgetCost: 60000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1006,
+        id: 1006,
         gadgetName: "iPad Air2",
         gadgetCategory: "Tablet",
         gadgetCost: 80000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1590252973599-bb37fb327a55?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }, 
     {
-        gadgetId: 1007,
+        id: 1007,
         gadgetName: "Galaxy S23",
         gadgetCategory: "Mobile",
         gadgetCost: 70000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1706832608032-61cced969d6a?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1008,
+        id: 1008,
         gadgetName: "iPhone 14",
         gadgetCategory: "Mobile",
         gadgetCost: 65000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1697898706719-bce6e007c817?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1009,
+        id: 1009,
         gadgetName: "Dell Inspiron 14 5000",
         gadgetCategory: "Laptop",
         gadgetCost: 60000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1010,
+        id: 1010,
         gadgetName: "iPad Air2",
         gadgetCategory: "Tablet",
         gadgetCost: 80000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1590252973599-bb37fb327a55?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }, 
     {
-        gadgetId: 1011,
+        id: 1011,
         gadgetName: "Galaxy S23",
         gadgetCategory: "Mobile",
         gadgetCost: 70000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1706832608032-61cced969d6a?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1012,
+        id: 1012,
         gadgetName: "iPhone 14",
         gadgetCategory: "Mobile",
         gadgetCost: 65000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1697898706719-bce6e007c817?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1013,
+        id: 1013,
         gadgetName: "Dell Inspiron 14 5000",
         gadgetCategory: "Laptop",
         gadgetCost: 60000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1014,
+        id: 1014,
         gadgetName: "iPad Air2",
         gadgetCategory: "Tablet",
         gadgetCost: 80000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1590252973599-bb37fb327a55?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }, 
     {
-        gadgetId: 1015,
+        id: 1015,
         gadgetName: "Galaxy S23",
         gadgetCategory: "Mobile",
         gadgetCost: 70000,
         gadgetImageUrl: "https://images.unsplash.com/photo-1706832608032-61cced969d6a?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        gadgetId: 1016,
+        id: 1016,
         gadgetName: "iPhone 14",
         gadgetCategory: "Mobile",
         gadgetCost: 65000,
@@ -122,10 +122,10 @@ function displayGadgets(){
     for(let eachGadget of allGadgets){
         data += `<div class='flex-item'>
                     <img src='${eachGadget.gadgetImageUrl}'>
-                    <div><button type='button' id='add-cart' onclick='addToCart(${eachGadget.gadgetId})'>Add to Cart</button></div>
+                    <div><button type='button' id='add-cart' onclick='addToCart(${eachGadget.id})'>Add to Cart</button></div>
                     <h4>Gadget Name: ${eachGadget.gadgetName}</h4>
                     <p>Gadget Category: ${eachGadget.gadgetCategory}</p>
-                    <p>Gadget Cost: ${eachGadget.gadgetCost}</p>
+                    <p>Gadget Cost: Rs.${eachGadget.gadgetCost}</p>
                     
                 </div>`;
     }
@@ -137,7 +137,7 @@ function addToCart(gadgetId){
     //alert(gadgetId);
     // traverse the allGadgets array and findout the gadget with the id gadgetId
     for(let eachGadget of allGadgets){
-        if(eachGadget.gadgetId == gadgetId){
+        if(eachGadget.id == gadgetId){
             // then add this gadget object to the array of allCartGadgets
             allCartGadgets.push(eachGadget);
             break;
@@ -149,6 +149,7 @@ function addToCart(gadgetId){
 }
 
 function displayCart(){
+    let totalCost = 0;
     let data = `<table>
                     <thead>
                         <tr>
@@ -160,15 +161,26 @@ function displayCart(){
                     <thead>
                     <tbody>`
     for(let eachCartItem of allCartGadgets){
+        totalCost += eachCartItem.gadgetCost;
         data += `<tr>
-                    <td>${eachCartItem.gadgetId}</td>
+                    <td>${eachCartItem.id}</td>
                     <td>${eachCartItem.gadgetName}</td>
-                    <td>${eachCartItem.gadgetCost}</td>
-                    <td><button type='button'>Remove</button></td>
+                    <td>Rs.${eachCartItem.gadgetCost}</td>
+                    <td><button type='button' onclick='removeFromCart(${eachCartItem.id})'>Remove</button></td>
                 </tr>`;
     }
     data += `</tbody></table>`;
-    
+    data += `<h4>TOTAL COST : Rs. ${totalCost}</h4>`;
     document.getElementById("div1").innerHTML = data;
+}
+
+function removeFromCart(gadgetId){
+    for(let i=0;i<allCartGadgets.length;i++){
+        if(allCartGadgets[i].id == gadgetId){
+            allCartGadgets.splice(i,1);
+            break;
+        }
+    }
+    displayCart();
 }
    

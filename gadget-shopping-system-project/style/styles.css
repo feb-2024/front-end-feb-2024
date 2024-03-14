@@ -22,9 +22,6 @@ main{
 }
 aside{
     grid-area: side;
-    border: 1px solid lightgreen;
-    background-color: darkgreen;
-    color: white;
 }
 footer{
     grid-area: foot;
@@ -63,4 +60,12 @@ iframe{
     color: white;
     border: 1px solid darkgreen;
     border-radius: 2px;
+}
+table{
+    width: 100%;
+    background-color: darkcyan;
+}
+thead{
+    background-color: beige;
+    color: darkcyan
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        input[type=text], select, button{
+            width: 100%;
+            padding: 6px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid darkorange;
+            border-radius: 5px;
+        }
+        form{
+            width: 300px;
+            border: 2px solid darkorange;
+            border-radius: 5px;
+            padding: 0 20px;
+            color: darkslategray;
+        }
+        button{
+            background-color: darkorange;
+            color: white;
+            border: 0px;
+            border-radius: 5px;
+        }
+        h3{
+            color: white;
+            background-color: darkslategray;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        span{
+            color: red;
+        }
+        p{
+            color: red;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        function validateTheForm(){
+            // here we will validate the form input elements
+            let flag = true;
+            
+            //validating gadgetName
+            let gadName = document.forms["myForm"]["gadgetName"].value;
+            if(gadName == ""){
+                document.getElementById("para1").innerHTML = "Gadget Name is Mandatory!" 
+                flag = false;
+            }else{
+                document.getElementById("para1").innerHTML = "";
+            }
+            // validating gadgetCategory
+            let gadCategory = document.forms["myForm"]["gadgetCategory"].value;
+            if(gadCategory == "select"){
+                document.getElementById("para2").innerHTML = "Gadget Category is Mandatory!" 
+                flag = false;
+            }else{
+                document.getElementById("para2").innerHTML = "";
+            }
+            // validating gadgetPrice
+            let gadPrice = document.forms["myForm"]["gadgetPrice"].value;
+            if(gadPrice == ""){
+                document.getElementById("para3").innerHTML = "Gadget Price is Mandatory!" 
+                flag = false;
+            }else{
+                document.getElementById("para3").innerHTML = "";
+            }
+            return flag;
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" action="form-success.html" method="get" onsubmit="return validateTheForm()">
+        <h3>ADD GADGET</h3>
+        <div>
+            <label for="gName">Gadget Name:</label><span>*</span>
+            <input type="text" id="gName" name="gadgetName">
+            <p id="para1"></p>
+        </div>
+        <div>
+            <label for="gCategory">Gadget Category:</label><span>*</span>
+            <select id="gCategory" name="gadgetCategory">
+                <option value="select">--select--</option>
+                <option value="mobile">Mobile</option>
+                <option value="laptop">Laptop</option>
+                <option value="tablet">Tablet</option>
+            </select>
+            <p id="para2"></p>
+        </div>
+        <div>
+            <label for="gPrice">Gadget Price:</label><span>*</span>
+            <input type="text" id="gPrice" name="gadgetPrice">
+            <p id="para3"></p>
+        </div>
+        <div>
+            <label for="gImage">Gadget Image Url:</label>
+            <input type="text" id="gImage" name="gadgetImage">
+        </div>
+       <div>
+            <button type="submit">Add Gadget</button>
+            <button type="reset">Clear</button>
+       </div>
+    </form>
+</body>
+</html>
