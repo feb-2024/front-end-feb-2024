@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h2>Demo to work with try and catch</h2>
+    <p id="para1"></p>
+    <script>
+        try{
+            alert("this message is displayed");    
+        } catch(err){
+            //console.log(err);
+            document.getElementById("para1").innerHTML = err;
+        }
+        
+    </script>
+</body>
+</html>

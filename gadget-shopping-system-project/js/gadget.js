@@ -150,7 +150,8 @@ function addToCart(gadgetId){
 
 function displayCart(){
     let totalCost = 0;
-    let data = `<table>
+    let data = `<h3 class="cart-head">CART ITEMS</h3>
+                <table>
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -166,7 +167,9 @@ function displayCart(){
                     <td>${eachCartItem.id}</td>
                     <td>${eachCartItem.gadgetName}</td>
                     <td>Rs.${eachCartItem.gadgetCost}</td>
-                    <td><button type='button' onclick='removeFromCart(${eachCartItem.id})'>Remove</button></td>
+                    <td><button type='button' onclick='removeFromCart(${eachCartItem.id})'><span class="material-symbols-outlined trash">
+                    delete
+                    </span></button></td>
                 </tr>`;
     }
     data += `</tbody></table>`;

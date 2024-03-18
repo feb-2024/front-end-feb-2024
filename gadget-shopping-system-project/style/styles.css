@@ -15,6 +15,8 @@ header{
     border: 1px solid lightgreen;
     background-color: black;
     color: white;
+    padding: 30px;
+    font-size: 18px;
 }
 main{
     grid-area: con;
@@ -28,6 +30,8 @@ footer{
     border: 1px solid lightgreen;
     background-color: black;
     color: white;
+    padding: 30px;
+    font-size: 18px;
 }
 img {
     width: 250px;
@@ -68,4 +72,22 @@ table{
 thead{
     background-color: beige;
     color: darkcyan
+}
+.trash{
+    background-color: beige;
+    color:darkcyan;
+    border-radius: 3px;
+}
+.cart-head{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid darkcyan;
+}
+.span1{
+    font-size: 150px;
+    margin: 10px;
+}
+.span2{
+    font-size: 40px;
+    margin: 10px;
 }
